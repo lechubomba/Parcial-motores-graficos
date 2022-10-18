@@ -1,0 +1,50 @@
+using UnityEngine;
+public LayerMask capaPiso; 
+public float magnitudSalto;
+public SphereCollider col;
+public class ControlJugador : MonoBehaviour 
+{
+    private Rigidbody rb; 
+    public int rapidez; 
+    
+    
+    void Start() 
+    {
+        rb = GetComponent<Rigidbody>();
+        col = GetComponent<sphereCollider>(); 
+        
+    }
+    private void OnTriggerEnter(Collider other) 
+    { 
+        if(other.gameObject.CompareTag("coleccionable") == true)
+        
+        {
+            other.gameObject.SetActive(false);
+        } 
+    }
+
+    private void FixedUpdate()
+    { 
+        float movimientoHorizontal = Input.GetAxis("Horizontal");
+        float movimientoVertical = Input.GetAxis("Vertical"); 
+        Vector3 vectorMovimiento = new Vector3(movimientoHorizontal, 0.0f, movimientoVertical);
+        rb.AddForce(vectorMovimiento * rapidez);
+
+    }
+    private void update() 
+    { 
+        if (Input.GetKeyDown(KeyCode.Space) && EstaEnPiso()) 
+        {
+          
+            rb.AddForce(Vector3.up * magnitudSalto, ForceMode.Impulse);
+        
+        }
+
+    }
+    private bool EstaEnPiso()
+    {
+        return Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x,
+            col.bounds.min.y, col.bounds.center.z), col.radius * .9f, capaPiso);
+
+    }
+}
