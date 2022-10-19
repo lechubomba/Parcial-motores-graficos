@@ -38,7 +38,8 @@ public class ControlJugador : MonoBehaviour
             rb.AddForce(Vector3.up * magnitudSalto, ForceMode.Impulse);
         }
     }
-
+   
+    
     private bool EstaEnPiso()
     {
         return Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), col.radius * .9f, capaPiso);
@@ -56,6 +57,8 @@ public class ControlJugador : MonoBehaviour
     {
         if (other.gameObject.CompareTag("coleccionable") == true)
         {
+            rapidez = rapidez + 10;
+            rb.transform.localScale = new Vector3(4f, 4f, 4f);
             cont = cont + 1;
             setearTextos();
             other.gameObject.SetActive(false);
