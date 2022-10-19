@@ -17,4 +17,6 @@ public class reinicio : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-}
+} 
+
+
