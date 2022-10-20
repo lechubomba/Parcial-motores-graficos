@@ -26,7 +26,7 @@ public class ControlSalto : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && (enElSuelo || maxSaltos > saltoActual))
         {
             rb.velocity = new Vector3(0f, saltoVel, 0f * Time.deltaTime);
-            //rigidBody.AddForce(Vector3.up * saltoVel, ForceMode.Impulse);
+          
             enElSuelo = false;
             saltoActual++;
         }
