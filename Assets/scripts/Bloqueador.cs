@@ -1,33 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-public class Bloqueador: MonoBehaviour 
-{ 
-    bool tengoQueBajar = false; 
-    int rapidez = 10; 
+
+public class Bloqueador : MonoBehaviour
+{
+
+    public Transform Player;
+    int MoveSpeed = 4;
+    int MaxDist = 10;
+    int MinDist = 5;
+
+
+
+
+    void Start()
+    {
+
+    }
+
     void Update()
     {
-        if (transform.position.y >= 8) 
+        transform.LookAt(Player);
+
+        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
         {
-            tengoQueBajar = true; 
-        } 
-        if (transform.position.y <= 2) 
-        {
-            tengoQueBajar = false; 
+
+            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+
+
+
+            if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
+            {
+
+            }
+
         }
-        if (tengoQueBajar) 
-        {
-            Bajar(); 
-        } 
-        else 
-        {
-            Subir();
-        } 
-    } 
-    void Subir() 
-    { 
-        transform.position += transform.up * rapidez * Time.deltaTime; 
-    } 
-    void Bajar() 
-    { 
-        transform.position -= transform.up * rapidez * Time.deltaTime;
-    } 
+    }
 }
