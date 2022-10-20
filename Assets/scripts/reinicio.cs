@@ -9,6 +9,7 @@ public class reinicio : MonoBehaviour
     {
         if (Input.GetKey("r"))
         {
+            Time.timeScale = 1;
             Restart();
         }
     }

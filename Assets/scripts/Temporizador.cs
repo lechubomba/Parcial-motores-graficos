@@ -30,7 +30,7 @@ public class Temporizador : MonoBehaviour
             currentTime = 0;
 
             textoPerdiste.text = " GameOver ";
-            
+            Time.timeScale = 0;
         }
 
     }
@@ -42,6 +42,15 @@ public class Temporizador : MonoBehaviour
         {
             currentTime = 0;
             textoPerdiste.text = " GameOver ";
+            
         }
+
+       
+
+
+
+
+
+
     }
 }
