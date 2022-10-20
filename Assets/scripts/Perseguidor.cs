@@ -1,44 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
-
-
-private CharacterControler_enemyAI;
-private Player_playerScript;
-
-
-void start();
-{
-    _enemyAI = GetComponent<CharacterController>();
-    _playerScript = GameObject.FindGameObjectWithTag("player").GetComponent<Player>();
-    if (enemy_AI == null)
-        Debug.Log.Error("enemy Script is Null");
-
-
-            if (_playerScript == null)
-        Debug.LogError("Player Script is Null");
-
-
-}
-Vector3 direction = _playerScript.transform.position - transform.position;
-Vector3 velocity = direction * _speed;
-float _gravity = _gravityValue * _gravityMultiplier * Time.deltaTime;
-
-if (_enemy_AI.isGrounded)
+using UnityEngine.UI;
+public class Perseguidor : MonoBehaviour
 {
 
+    public Transform Player;
+    int MoveSpeed = 4;
+    int MaxDist = 10;
+    int MinDist = 5;
 
 
+
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+        transform.LookAt(Player);
+
+        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+        {
+
+            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+
+
+
+            if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
+            {
+                //Here Call any function U want Like Shoot at here or something
+            }
+
+        }
+    }
 }
-else
-{
-    _enemiesYVelocity -= _gravity;
-
-
-}
-velocity.y = _enemies.YVelocity;
-velocity.Normalize();
-transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(velocity), _speed * Time.deltatime);
-_enemyAI.Move(velocity * Time.DeltaTime);

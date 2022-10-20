@@ -575,6 +575,7 @@ GameObject:
   - component: {fileID: 997785719}
   - component: {fileID: 997785718}
   - component: {fileID: 997785723}
+  - component: {fileID: 997785724}
   m_Layer: 0
   m_Name: Perseguidor
   m_TagString: Untagged
@@ -670,7 +671,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997785717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23, y: 35.22, z: 23.7}
+  m_LocalPosition: {x: -23, y: 35.11, z: 26.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -695,6 +696,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &997785724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997785717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b313f850cd8f38c478d142983a5a2874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 2026986787}
 --- !u!1 &1097134661
 GameObject:
   m_ObjectHideFlags: 0
