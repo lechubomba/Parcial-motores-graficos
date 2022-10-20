@@ -45,12 +45,5 @@ public class Temporizador : MonoBehaviour
             
         }
 
-       
-
-
-
-
-
-
     }
 }

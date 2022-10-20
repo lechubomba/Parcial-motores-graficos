@@ -12,11 +12,4 @@ public class subsuelo : MonoBehaviour
         }
 
     }
-
-
-
-
-
-
-
 }
