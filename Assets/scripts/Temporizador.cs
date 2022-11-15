@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class Temporizador : MonoBehaviour
 {
     float currentTime;
-    public float startingTime = 60f;
+    public float startingTime = 80f;
     public TMPro.TMP_Text textoPerdiste;
 
     [SerializeField] TextMeshProUGUI countdownText;
@@ -42,7 +42,7 @@ public class Temporizador : MonoBehaviour
         {
             currentTime = 0;
             textoPerdiste.text = " GameOver ";
-            
+
         }
 
     }
