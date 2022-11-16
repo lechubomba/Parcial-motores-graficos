@@ -1,5 +1,5 @@
 using UnityEngine; 
-public class Embestidor : MonoBehaviour 
+public class Bondi : MonoBehaviour 
 {
     bool tengoQueBajar = false;
     int rapidez = 10; 
