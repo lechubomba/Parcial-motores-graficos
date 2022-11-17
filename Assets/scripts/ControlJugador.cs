@@ -80,7 +80,13 @@ public class ControlJugador : MonoBehaviour
             powerup.GetComponent<Renderer>().enabled = false;
         }
     }
-    
+    private void Sonido()
+    {
+        GestorDeAudio.instancia.ReproducirSonido("bombos");
+    }
+
+
 
 }
+
 
