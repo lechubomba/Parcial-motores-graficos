@@ -29,7 +29,7 @@ public class ControlJugador : MonoBehaviour
         {
             textoGanaste.text = "GANASTE¡¡¡";
 
-            
+
         }
     }
 

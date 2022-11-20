@@ -945,7 +945,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "773a3a683c7f47a393f4da711c4dbb33",
     "m_Id": 0,
-    "m_DisplayName": "WaterColor",
+    "m_DisplayName": "LavaColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -972,10 +972,10 @@
     "m_Guid": {
         "m_GuidSerialized": "c5781fe1-9034-4061-9de9-a5742f33a35c"
     },
-    "m_Name": "WaterColor",
+    "m_Name": "LavaColor",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "WaterColor",
-    "m_DefaultReferenceName": "_WaterColor",
+    "m_RefNameGeneratedByDisplayName": "LavaColor",
+    "m_DefaultReferenceName": "_LavaColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -985,9 +985,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.1764705926179886,
-        "g": 0.3686274588108063,
-        "b": 1.0,
+        "r": 1.0,
+        "g": 0.32782313227653506,
+        "b": 0.1764705777168274,
         "a": 0.0
     },
     "isMainColor": false,
@@ -1767,9 +1767,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.2705882489681244,
-        "g": 0.5921568870544434,
-        "b": 1.0,
+        "r": 0.9905660152435303,
+        "g": 0.15444308519363404,
+        "b": 0.0,
         "a": 0.0
     },
     "isMainColor": false,

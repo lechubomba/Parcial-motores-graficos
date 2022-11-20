@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterMaterial
+  m_Name: Lava
   m_Shader: {fileID: -6465566751694194690, guid: badade6c323b6df49a3572861b82bf0e, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -24,18 +24,10 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    m_Colors: []
+    - _Density: 12
+    - _Power: 4
+    - _Speed: 5
+    m_Colors:
+    - _Olas: {r: 1, g: 0.3837679, b: 0.2705883, a: 0}
+    - _WaterColor: {r: 1, g: 0.3278231, b: 0.1764706, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &2357215437133210824
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 0
