@@ -59,18 +59,21 @@ public class ControlJugador : MonoBehaviour
     {
         if (other.gameObject.CompareTag("coleccionable") == true)
         {
-
+            GestorDeAudio.instancia.ReproducirSonido("corre");
+            other.gameObject.SetActive(false);
             rapidez = rapidez + 10;
             rb.transform.localScale = new Vector3(4f, 4f, 4f);
             cont = cont + 1;
-            setearTextos();
-            other.gameObject.SetActive(false);
+          
+           
+
         }
     }
+   
 
 
 
-    public GameObject powerup;
+ public GameObject powerup;
 
     void OnCollisionEnter(Collision col)
     {
@@ -78,8 +81,15 @@ public class ControlJugador : MonoBehaviour
         {
             Debug.Log("Collision detected");
             powerup.GetComponent<Renderer>().enabled = false;
+          
         }
     }
+
+
+
+
+
+
     private void Sonido()
     {
         GestorDeAudio.instancia.ReproducirSonido("bombos");
