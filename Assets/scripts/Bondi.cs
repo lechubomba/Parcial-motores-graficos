@@ -1,8 +1,11 @@
-using UnityEngine; 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 public class Bondi : MonoBehaviour 
 {
     bool tengoQueBajar = false;
-    int rapidez = 10; 
+    int rapidez = 20; 
     void Update() 
     { 
         if (transform.position.y >= 8) 
@@ -31,7 +34,14 @@ public class Bondi : MonoBehaviour
     { 
         transform.position -= transform.up * rapidez * Time.deltaTime; 
     }
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(0);
+        }
 
+    }
 
 
 
