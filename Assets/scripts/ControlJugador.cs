@@ -12,7 +12,8 @@ public class ControlJugador : MonoBehaviour
     public LayerMask capaPiso;
     public float magnitudSalto;
     public SphereCollider col;
-
+    float currentTime;
+    public float startingTime = 80f;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -61,19 +62,16 @@ public class ControlJugador : MonoBehaviour
         {
             GestorDeAudio.instancia.ReproducirSonido("corre");
             other.gameObject.SetActive(false);
-            rapidez = rapidez + 10;
-            rb.transform.localScale = new Vector3(4f, 4f, 4f);
+            rapidez = rapidez + 3;
             cont = cont + 1;
           
            
 
         }
     }
-   
+  
 
-
-
- public GameObject powerup;
+    public GameObject powerup;
 
     void OnCollisionEnter(Collision col)
     {
@@ -81,22 +79,15 @@ public class ControlJugador : MonoBehaviour
         {
             Debug.Log("Collision detected");
             powerup.GetComponent<Renderer>().enabled = false;
-          
+            
         }
     }
-
-
-
-
-
-
     private void Sonido()
     {
         GestorDeAudio.instancia.ReproducirSonido("bombos");
     }
 
-
+    
 
 }
-
 
