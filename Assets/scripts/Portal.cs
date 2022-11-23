@@ -11,10 +11,11 @@ public class Portal : MonoBehaviour
         
     }
 
-   
-    void Update()
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.CompareTag("Portal") == true)
+            Pausar();
     }
 
     public void Pausar()
@@ -31,15 +32,5 @@ public class Portal : MonoBehaviour
             
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("portal") == true)
-        {
-            Time.timeScale = 0;
-        }
-        
-
-
-
-    }
+   
 }
