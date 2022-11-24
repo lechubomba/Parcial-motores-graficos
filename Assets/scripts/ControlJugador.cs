@@ -6,8 +6,6 @@ public class ControlJugador : MonoBehaviour
 {
     private Rigidbody rb;
     public int rapidez;
-    public TMPro.TMP_Text textoCantidadRecolectados;
-    public TMPro.TMP_Text textoGanaste;
     private int cont;
     public LayerMask capaPiso;
     public float magnitudSalto;
@@ -18,21 +16,11 @@ public class ControlJugador : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<SphereCollider>();
-        cont = 0;
-        textoGanaste.text = "";
-        setearTextos();
+       
+      
     }
 
-    private void setearTextos()
-    {
-        textoCantidadRecolectados.text = "Collectibles collected: " + cont.ToString();
-        if (cont >= 2)
-        {
-            textoGanaste.text = "GANASTE¡¡¡";
-
-
-        }
-    }
+    
 
     private void Update()
     {
@@ -63,7 +51,7 @@ public class ControlJugador : MonoBehaviour
             GestorDeAudio.instancia.ReproducirSonido("corre");
             other.gameObject.SetActive(false);
             rapidez = rapidez + 3;
-            cont = cont + 1;
+           
           
            
 
@@ -87,7 +75,9 @@ public class ControlJugador : MonoBehaviour
         GestorDeAudio.instancia.ReproducirSonido("bombos");
     }
 
-    
+   
+
+
 
 }
 

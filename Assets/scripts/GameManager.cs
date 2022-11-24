@@ -6,5 +6,5 @@ public class GameManager : MonoBehaviour
         GestorDeAudio.instancia.ReproducirSonido("bombos");
     }
     
-    //con el codigo de arribase pone el corre si apretas espacio
+  
 }
